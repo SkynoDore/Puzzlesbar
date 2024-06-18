@@ -1,0 +1,37 @@
+
+  /*--------------------formulario de reserva--------------------------*/
+  /*Contenedor del formulario*/
+  #form {
+    max-width: 100%;
+    overflow: auto;
+    width: 450px;
+    margin: auto;
+  }
+  form {
+    margin: auto;  
+    padding: 20px 30px;
+    background-color: #e9e9d6;
+  }
+  /* estetica de los cuadros de texto*/
+  input[type=text],[type=tel], [type=email] {
+    width: 100%;
+    padding: 6px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  /*caja de comentarios*/
+  textarea, select {
+    padding: 6px 12px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  button {
+    background-color: white;
+    padding: 5px 8px 5px 8px;
+  }
+  
+  .campos-faltantes {
+    border: 2px solid red; /* Cambia el borde a rojo */
+    background-color: #ffe6e6; /* Cambia el color de fondo a un tono de rojo claro */
+  }

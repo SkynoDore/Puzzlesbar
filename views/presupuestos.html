@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Gabriel Vich">
+    <meta name="description" content="Bar y sala de entretenimiento, diversion sin limites">
+    <meta name="category" content="Bar">
+    <link rel="icon" type="image/jpg" href="../photos/favicon.ico">
+    <link rel="stylesheet" href="../Style/css1.css">
+    <link rel="stylesheet" href="../Style/formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- carga de jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Realizar una reserva o pedir más información</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img src="../photos/logo.png" alt="logo"></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Cócteles</a></li>
+                <li><a href="presupuestos.html" id="selected">Reserva</a></li>
+                <li><a href="eventos.html">Noticias</a></li>
+                <li><a href="contacto.html">Encuéntranos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 style="text-align: center">¿Ocasion especial? reserva aqui!</h1>
+        <div id="form">
+
+            <!--la funcion se llamara a cualquier cambio del formulario.-->
+            <form onchange="presupuesto()">
+                <p>
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </p>
+                <p>
+                    <label for="apellido">Apellido: </label>
+                    <input type="text" id="apellido" name="Apellido" required>
+                </p>
+                <p>
+                    <label for="phone">Numero movil: </label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{9}" placeholder="Ej: 632208753" required>
+                    <br>
+                </p>
+                <p>
+                    <label for="email">Correo electronico: </label>
+                    <input type="email" id="email" name="email" placeholder="Ej: puzzles.bar@awesomemail.com" required>
+                    <br>
+                </p>
+                <hr>
+                <p>
+                    <label for="producto">Que quieres reservar?</label><br>
+                    <select id="producto">
+                        <option value="mesa">Una mesa</option>
+                        <option value="sala">Una sala</option>
+                        <option value="barEntero">Toda la premisa</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="personas">Cuantas personas son?</label>
+                    <input type="number" id="personas" name="personas" required>
+                </p>
+                <p>
+                    <strong>(Opcional)Extras:</strong><br>
+                    Copas de invitación<input type="checkbox" id="copas" name="copas"><br>
+                    Menu oferta experiencia New York<input type="checkbox" id="menu" name="menu"><br>
+                    Decoración a su gusto<input type="checkbox" id="deco" name="deco"><br>
+                </p>
+                <p>
+                    <label for="fecha">Fecha de reserva:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </p>
+                <small>(Se aplicará un 20% de descuento si se reserva con una semana de
+                    antelación)</small>
+                <p>
+                    <label for="total">Total</label>
+                    <input type="number" id="total" name="total" disabled>
+                </p>
+                <p>
+                    <label for="privacidad">Acepta nuestra <a href="#">politica de privacidad?</a></label>
+                    <input type="checkbox" id="privacidad" name="privacidad" required>
+                </p>
+                <button type="button" id="enviar">Enviar</button>
+                <button type="reset">Borrar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h3>Redes sociales</h3>
+        <ul>
+            <li>
+                <a href="contacto.html"><img src="../photos/ig.png" alt="Logo de Instagram" title="Instagram"></a>
+            </li>
+            <li>
+                <a href="contacto.html"><img src="../photos/fb.png" title="Facebook" alt="Logo de Facebook"></a>
+            </li>
+            <li>
+                <a href="contacto.html"><img src="../photos/x.png" title="Twitter" alt="Logo de Twitter"></a>
+            </li>
+        </ul>
+        <br>
+        <p>Calle de Alonso Cano, 44, 46, 28003 Madrid.</p>
+        <p id="copyright">©2023 Puzzles inc. Todos los derechos reservados</p>
+    </footer>
+
+    <!--carga de scripts -->
+    <script src="../scripts/formulario.js"></script>
+</body>
+
+</html>
