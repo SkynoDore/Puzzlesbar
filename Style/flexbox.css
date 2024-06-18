@@ -1,0 +1,38 @@
+/*----------------------------------FLEX--------------------------------------
+  aqui creo un contenedor flex,
+  que permitira que el contenido se adapte dependiendo de las dimensiones
+  de la pantalla del usuario de forma automatica*/
+  .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Aqui configuro las dimensiones de las cajas y su estetica*/
+  .contenedor div {
+    width: 520px; 
+    margin: 10px;
+    background-color: #e9e9d6;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px #c6c6b9;
+  }
+  .contenedor div p,h2 {padding: 10px;}
+  
+  /* Aqui configuro las imagenes para que se queden al borde de la caja */
+  .contenedor div img {
+    position:sticky;
+    top:100%;
+    max-width: 100%;
+    width: 520px;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /*Esta clase es para que las fotos de la pagina de "Còcteles"
+   se muestren pegadas al borde superior (preferencia personal)*/
+  #fotoarriba div img{
+    position:static; 
+    top: 0%;
+  }

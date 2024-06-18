@@ -1,0 +1,140 @@
+
+html {
+  margin: 0;
+  padding: 0;
+  background:#f5f5dc;
+  /*aqui establezco la fuente por defecto*/
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+main {
+  padding: 30px;
+}
+#noticias {    padding: 7px;}
+#noticias a{
+  margin-bottom: 0;
+  color: #060090;
+  text-decoration: none;
+  }
+
+/*Aqui pongo la fuente que importé de google fonts
+para los titulares y le hago unos ajustes*/
+h1, h2{
+font-family: 'Dela Gothic One', cursive;
+letter-spacing: 2px;
+word-spacing: 8px;
+font-weight:300;
+}
+/*---------------------Barra de navegación-------------------------
+Aqui establezco que la barra abarque el 100% de la pagina*/
+nav {
+  width: 100%;
+  background-color:#D9D9C3;
+}
+
+  /*estilo de la lista de la barra*/
+nav ul {
+  list-style: none;
+  overflow: auto; 
+  padding: 0;
+  margin: 0;
+}
+
+/*permite que los elementos de la lista "floten" de izq a der.*/
+nav ul li {float: left;}
+
+/*texto de la barra*/
+nav ul li a{
+  font-weight:bold;
+  font-size: 2rem;
+  display: block;
+  padding: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+/*Ajustes para el logo*/
+nav ul li img {
+  width: auto;
+  height: 70px;
+  margin-top: 7px;
+}
+
+/*esto es para identificar en que pagina te encuentras*/
+#selected {color:#a54747;}
+
+/*-----------------------------------Noticias-----------------------------*/
+#eventos{
+  width:100%;
+}
+/*es un contenedor de tipo grid que se puede scrollear en el eje X*/
+#grid
+{
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+}
+
+/*estetica de las cajas*/
+#grid div {
+  background-color: #e9e9d6;
+  border-radius: 15px;
+  margin: 20px;
+  width: 400px;
+  height: 400px;
+}
+
+#grid div img
+{
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/*------------------------------Footer----------------------------*/
+footer {
+  padding: 10px 40px 5px 40px;
+  background-color: #D9D9C3;
+  box-shadow: inset 0 5px 5px #e6e6c7;
+}
+
+/*lista que hice para que los logos de redes sociales se vean de izq a derecha*/
+footer ul {
+  list-style: none;
+padding-left: 0;
+}
+
+footer ul li {
+  display: inline;
+}
+footer ul li a img{
+  text-decoration: none;
+  width: 40px;
+  height: auto;
+}
+
+#copyright {
+  font-size: 12px;
+  text-align: center;
+}
+/*--------------Ajustes que hice para la vista con dispositivos moviles-----------*/
+@media only screen and (max-width: 600px) 
+  {
+  nav ul li a{font-size: 1em; padding: 5px; margin-top: 8px; margin-right: 7px;}
+  nav ul li img {float:right;width: 160px; height: auto;}
+  .contenedor {margin: -20px;}
+  footer {padding: 10px;}
+  h2 {
+    letter-spacing: 1px;
+  word-spacing: 4px;
+  }
+  .cajaSimple {
+    width: 350px;
+  }
+}
+  
+/*eso ya seria todo :)
+Gracias por ver*/

@@ -1,0 +1,96 @@
+/*----------------------------------Slider--------------------------------------
+*/
+
+    #seccion_slider {
+        margin: auto;
+        display:inline-flex;
+        width: 100%;
+      }
+      .flecha {
+        width: 40px;
+        align-self: center;
+        z-index: 1;
+        padding: 1px;
+        border-radius: 20px;
+        background: white;
+        border-style:groove;
+      }
+
+      /* se rota 180 grados para que apunte a la derecha */
+      #flechader {
+        rotate: 180deg;
+      }
+        .slider{
+        margin: auto;
+        display: flex;
+        overflow-x:hidden;
+      }
+      
+      .cajas {
+        display: flex;
+        width: 49%;
+        flex: 0 0 auto;
+        height: 520px; 
+        margin: 10px;
+        background-color: #e9e9d6;
+        border-radius: 10px;
+        box-shadow: inset 0 0 5px #c6c6b9;
+        overflow: hidden;
+      }
+      .texto {padding: 10px;
+        width: 100%;
+        max-width: 280px;
+      }
+      
+      /* Aqui configuro las imagenes para que se queden al borde de la caja */
+      .cajas img {
+        flex-shrink: 0;
+        margin-left: 0;
+        max-width: 100%;
+        width: 480px; 
+        height: 520px; 
+        border-radius: 10px;
+        object-fit: cover;
+      }
+  
+      @media only screen and (max-width: 600px) {
+        html {
+            overflow-x:hidden;
+            width:100%;
+        }
+        #seccion_slider{
+            width: 100%;
+            overflow:hidden;
+
+        }
+        .slider{
+            height: 400px;
+            margin: 0;
+            width: 100%;
+            overflow:hidden;
+          }
+          .cajas img{
+            width: 180px;
+            height: 400px;
+          }
+          .cajas {
+            width: 80%;
+            height: 400px;
+            overflow:hidden;
+            margin-left: 0;
+            margin-right: 15px;
+          }
+          #flechaizq{
+            position: absolute;
+          }
+          #flechader{
+            position: absolute;
+            right: 10px;
+          }
+          .texto {
+            font-size: small;
+          }
+          #sidebar {
+            display: none;
+          }
+      }
